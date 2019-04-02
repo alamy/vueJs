@@ -11,6 +11,8 @@ export default new Router({
       path: '/',
       name: 'inicio',
       component: inicio
+     
     }
+   
   ]
 })
