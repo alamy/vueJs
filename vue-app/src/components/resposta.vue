@@ -3,18 +3,20 @@
   <div class="hello">
  
    
-   <h1>teste</h1>
    
+   <p>vc esta aqui</p>
+   <h1>{{nome}}</h1>
   </div>
   
 </template>
 
 <script>
 export default {
+    name: 'resposta',
   data () {
     return {
-      nameResposta: nomeFim,
-      emailResposta : emailFim
+      nome: console.log(this.$route.params.nome)
+      
     }
 
   }

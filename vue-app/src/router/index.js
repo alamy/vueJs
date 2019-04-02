@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import inicio from '@/components/inicio'
-//import resultado from '@/components/resultato'
+import resposta from '@/components/resposta'
 
 Vue.use(Router)
 
@@ -10,8 +10,13 @@ export default new Router({
     {
       path: '/',
       name: 'inicio',
-      component: inicio
-     
+      component: inicio,
+      props:{sidbar:'dark'}
+    },
+    {
+      path: '/resposta',
+      name: 'resposta',
+      component: resposta
     }
    
   ]

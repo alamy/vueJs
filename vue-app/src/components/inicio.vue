@@ -1,9 +1,12 @@
-<template>
 
-  <div class="hello">
+
+
+<template id="formulario">
+
+ 
  
    
-   <form id="app" v-on:submit="checkForm" >
+   <form id="form" v-on:submit="checkForm" action="/#/resposta/" >
     <p> {{nomefim}} </p>
    <div class="row">
       <div class="input-field col s12">
@@ -23,7 +26,7 @@
         <div class="input-field col s12 ">
 
           <input type="submit"  class="waves-effect waves-light btn" value="enviar"/>
-         
+        
          
        </div>
   </div>
@@ -31,37 +34,34 @@
       
     </form>
    
-  </div>
+
   
 </template>
 
 <script>
 export default {
- mounted() {
-  console.log(this.$route.params.nome)
-   
-},
+name: 'inicio',
   data () {
     return {
       
     
     }
 
- var app = new App ({
-    el: '#app',
+ var form = new Form ({
+    el: '#form',
     data: {
       nome: this.nome,
       email: this.email,
     },
     methods: {
       checkForm:function(event){
-        alert('nome')
-        //if(this.nome == "" || this.email == ""){
-        //  this.log = "peencha o campo correto";
-        //  event.preventDefault();
-      //  }else{
-        //   var nomeFim = this.nome;
-        //  }   
+       
+        if(this.nome == "" || this.email == ""){
+        this.log = "peencha o campo correto";
+          event.preventDefault();
+        }else{
+          var nomeFim = this.nome;
+          }   
       },
 
      
